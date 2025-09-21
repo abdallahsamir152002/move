@@ -1,0 +1,10 @@
+{
+    "nav":{
+  "about": "About Us",
+  "howItWorks": "How It Works",
+  "locations": "Locations",
+  "rentalPlans": "Rental Plans",
+  "contact": "Contact Us",
+  "downloadApp": "Download App"
+    }
+}
