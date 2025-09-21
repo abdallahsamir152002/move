@@ -1,24 +1,24 @@
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import './App.css'
-import Navbar from './Components/Navbar'
-import Aboutmove from './Components/Aboutmove'
-import HowItsWorks from './Components/HowItWorks'
-import Notifications from './Components/Notifications'
-import BatteryManagement from './Components/BatteryManagement'
-import ReadyToRideSmarter from './Components/ReadyToRideSmarter'
-import OurGreenMission from './Components/OurGreenMission'
-import VisionSection from './Components/VisionSection'
-import CTAsection from './Components/CTASection'
-import ContactUs from './Components/ContactUs'
-import Footer from './Components/Footer'
-
+import Navbar from "./components/layout/Navbar";
+import Aboutmove from "./components/sections/Aboutmove";
+import HowItsWorks from "./components/sections/HowItWorks";
+import Notifications from "./components/sections/Notifications";
+import BatteryManagement from "./components/sections/BatteryManagement";
+import ReadyToRideSmarter from "./components/sections/ReadyToRideSmarter";
+import OurGreenMission from "./components/sections/OurGreenMission";
+import VisionSection from "./components/sections/VisionSection";
+import CTAsection from "./components/sections/CTASection";
+import ContactUs from "./components/sections/ContactUs";
+import Footer from "./components/layout/Footer";
+import HeroSection from "./components/sections/HeroSection";
 
 function App() {
   return (
     <div>
       <Navbar />
+      <HeroSection />
       <Aboutmove />
       <HowItsWorks />
       <Notifications />
@@ -30,7 +30,7 @@ function App() {
       <ContactUs />
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
