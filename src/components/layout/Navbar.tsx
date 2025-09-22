@@ -5,12 +5,10 @@ import { motion } from "framer-motion";
 
 export default function LandingPage() {
   const { t, i18n } = useTranslation();
-  const initialLang = window.location.hash.includes("lang=it") ? "it" : "en";
+  const currectLangauge = i18n.language;
 
   const [langOpen, setLangOpen] = useState(false);
-  const [currentLang, setCurrentLang] = useState<"en" | "it">(
-    initialLang as "en" | "it"
-  );
+
   const [isScrolled, setIsScrolled] = useState(false);
 
   const languageOptions: Record<"en" | "it", { label: string }> = {
@@ -36,10 +34,11 @@ export default function LandingPage() {
         className={`fixed top-2 left-1/2 -translate-x-1/2 w-full max-w-6xl 
                       px-2 py-0 flex justify-between items-center rounded-2xl
                       backdrop-blur-md transition-all duration-300 z-50
-                      border ${isScrolled
-            ? "bg-black/40 border-white/10 shadow-lg"
-            : "bg-transparent border-transparent shadow-none"
-          }`}
+                      border ${
+                        isScrolled
+                          ? "bg-black/40 border-white/10 shadow-lg"
+                          : "bg-transparent border-transparent shadow-none"
+                      }`}
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -71,7 +70,7 @@ export default function LandingPage() {
               onClick={() => setLangOpen(!langOpen)}
               className="text-white bg-black/40 px-3 py-1 rounded-xl hover:bg-black/60 transition"
             >
-              {languageOptions[currentLang].label}
+              {currectLangauge}
             </button>
             {langOpen && (
               <div className="absolute right-0 mt-2 bg-white border rounded-lg shadow-lg">
@@ -82,7 +81,6 @@ export default function LandingPage() {
                       key={typedLang}
                       className="px-4 py-2 w-full text-left hover:bg-gray-100"
                       onClick={() => {
-                        setCurrentLang(typedLang);
                         i18n.changeLanguage(typedLang);
                         setLangOpen(false);
                       }}

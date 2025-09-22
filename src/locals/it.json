@@ -13,21 +13,7 @@
     },
     "howItWorks": {
     "title": "Come funziona?",
-    "subtitle": "Noleggiare un monopattino Move è semplice e conveniente.",
-    "steps": [
-      {
-        "title": "1. Scegli il tuo abbonamento e il periodo di noleggio",
-        "description": "Seleziona un abbonamento che si adatta alle tue esigenze e un periodo di noleggio – da 1 settimana a periodi più lunghi."
-      },
-      {
-        "title": "2. Consegna veloce",
-        "description": "Consegnamo il tuo monopattino entro 24 ore all'indirizzo specificato."
-      },
-      {
-        "title": "3. Usa e parcheggia liberamente",
-        "description": "Goditi il tuo monopattino! Parcheggialo dove necessario utilizzando l'app. L'ultimo giorno del noleggio, lascialo in un punto accessibile per il ritiro e scatta una foto della posizione tramite l'app."
-      }
-    ]
+    "subtitle": "Noleggiare un monopattino Move è semplice e conveniente."
   }
 
 }
