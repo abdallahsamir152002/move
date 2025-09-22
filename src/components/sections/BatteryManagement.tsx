@@ -4,7 +4,7 @@ export default function BatteryManagement() {
   return (
     <div className="bg-white py-16 px-6">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-        
+
         {/* Image Left */}
         <div className="flex justify-center">
           <img

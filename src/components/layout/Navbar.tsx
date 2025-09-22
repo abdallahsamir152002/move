@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Download, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
+
 export default function LandingPage() {
-  const [t, i18n] = useTranslation();
+  const { t, i18n } = useTranslation();
   const initialLang = window.location.hash.includes("lang=it") ? "it" : "en";
 
   const [langOpen, setLangOpen] = useState(false);
@@ -30,12 +31,15 @@ export default function LandingPage() {
   }, []);
 
   return (
-    <div className="fixed top-0 w-full overflow-x-hidden">
+    <div className="fixed top-0 w-full overflow-x-hidden z-50">
       <motion.header
         className={`fixed top-2 left-1/2 -translate-x-1/2 w-full max-w-6xl 
                       px-2 py-0 flex justify-between items-center rounded-2xl
                       backdrop-blur-md transition-all duration-300 z-50
-                      border ${isScrolled ? "bg-black/40 border-white/10 shadow-lg" : "bg-transparent border-transparent shadow-none"}`}
+                      border ${isScrolled
+            ? "bg-black/40 border-white/10 shadow-lg"
+            : "bg-transparent border-transparent shadow-none"
+          }`}
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -49,16 +53,16 @@ export default function LandingPage() {
         </div>
         <nav className="hidden md:flex space-x-6 text-white font-medium">
           <a href="#about" className="hover:underline">
-            {t("about")}
+            {t("navbar.about")}
           </a>
           <a href="#howItWorks" className="hover:underline">
-            {t("howItWorks")}
+            {t("navbar.howItWorks")}
           </a>
           <a href="#locations" className="hover:underline">
-            {t("locations")}
+            {t("navbar.locations")}
           </a>
           <a href="#contact" className="hover:underline">
-            {t("contact")}
+            {t("navbar.contact")}
           </a>
         </nav>
         <div className="flex items-center gap-4">
@@ -92,7 +96,7 @@ export default function LandingPage() {
           </div>
           <button className="flex items-center gap-2 bg-lime-500 text-white text-bold px-4 py-2 rounded-xl hover:bg-lime-700 transition">
             <Download size={20} />
-            {t("downloadApp")}
+            {t("navbar.downloadApp")}
           </button>
         </div>
       </motion.header>

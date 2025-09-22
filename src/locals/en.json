@@ -1,10 +1,32 @@
 {
-    "nav":{
+    "navbar":{
   "about": "About Us",
   "howItWorks": "How It Works",
   "locations": "Locations",
-  "rentalPlans": "Rental Plans",
   "contact": "Contact Us",
   "downloadApp": "Download App"
-    }
+    },
+
+    "aboutMove": {
+    "title": "About Move",
+    "description": "Pioneering sustainable urban mobility with smart, eco-friendly electric micro-mobility solutions."
+  },
+  "howItWorks": {
+    "title": "How it Works?",
+    "subtitle": "Renting a Move scooter is simple and convenient.",
+    "steps": [
+      {
+        "title": "1. Choose your subscription and rental period",
+        "description": "Select a subscription that fits your needs and a rental period – from 1 week to longer terms."
+      },
+      {
+        "title": "2. Speedy Delivery",
+        "description": "We deliver your scooter within 24 hours to your specified address."
+      },
+      {
+        "title": "3. Use & Park Freely",
+        "description": "Enjoy your scooter! Park it as needed using the app. On your rental's last day, leave it in an accessible spot for pickup and snap a photo of its location via the app."
+      }
+    ]
+  }
 }
