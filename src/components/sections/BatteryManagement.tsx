@@ -1,6 +1,9 @@
 import { Zap, BatteryCharging } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function BatteryManagement() {
+  const { t } = useTranslation();
+
   return (
     <div className="bg-white py-16 px-6">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
@@ -9,7 +12,7 @@ export default function BatteryManagement() {
         <div className="flex justify-center">
           <img
             src="/5W0A9798.JPG"
-            alt="Battery Management"
+            alt={t("battery.alt")}
             className="rounded-3xl shadow-lg w-full max-w-md"
           />
         </div>
@@ -20,12 +23,12 @@ export default function BatteryManagement() {
           <div className="flex items-center space-x-3">
             <Zap className="text-lime-500 w-10 h-10" />
             <h2 className="text-3xl md:text-4xl font-bold text-lime-500">
-              Battery Management
+              {t("battery.title")}
             </h2>
           </div>
 
           <p className="text-gray-700 font-medium">
-            We take care of the charge, so you can focus on the ride.
+            {t("battery.subtitle")}
           </p>
 
           {/* Card with Details */}
@@ -33,30 +36,30 @@ export default function BatteryManagement() {
             <div className="flex items-center">
               <BatteryCharging className="text-lime-500 w-6 h-6 mr-2" />
               <h3 className="text-xl font-semibold">
-                Proactive Monitoring & Swaps
+                {t("battery.card.title")}
               </h3>
             </div>
 
             <p className="text-gray-700">
-              Forget battery anxiety. We continuously monitor the battery level
-              of your scooter remotely. When the battery level drops to 40%, you
-              can schedule a battery swap through the app. Simply leave the
-              scooter in an accessible area, and our team will handle the battery
-              replacement for you.
+              {t("battery.card.description")}
             </p>
 
             <p className="font-medium text-center">
-              Our subscription tiers offer convenient battery swap options:
+              {t("battery.card.swapTitle")}
             </p>
 
             <ul className="list-disc ml-6 space-y-2">
               <li>
-                <span className="text-lime-500 font-semibold">Easy Move</span>:
-                Includes one battery swap per week.
+                <span className="text-lime-500 font-semibold">
+                  {t("battery.card.plans.easy.title")}
+                </span>
+                : {t("battery.card.plans.easy.description")}
               </li>
               <li>
-                <span className="text-lime-500 font-semibold">Super Move</span>:
-                Includes two battery swaps per week.
+                <span className="text-lime-500 font-semibold">
+                  {t("battery.card.plans.super.title")}
+                </span>
+                : {t("battery.card.plans.super.description")}
               </li>
             </ul>
           </div>

@@ -8,10 +8,10 @@ function Aboutmove() {
         <div className="text-center mb-12">
           <h2 className="text-4xl text-bold text-lime-500 font-bold mb-10">
             {" "}
-            {t("About Move")}
+            {t("aboutMove.title")}
           </h2>
           <p className="text-black text-2xl text-bold max-w-3xl mx-auto">
-            {t("Pioneering sustainable urban mobility with smart, eco-friendly electric micro-mobility solutions.")}
+            {t("aboutMove.description")}
           </p>
         </div>
       </div>

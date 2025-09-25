@@ -6,7 +6,6 @@
     "contact": "Contact Us",
     "downloadApp": "Download App"
   },
-
   "aboutMove": {
     "title": "About Move",
     "description": "Pioneering sustainable urban mobility with smart, eco-friendly electric micro-mobility solutions."
@@ -28,5 +27,125 @@
         "description": "Enjoy your scooter! Park it as needed using the app. On your rental's last day, leave it in an accessible spot for pickup and snap a photo of its location via the app."
       }
     ]
-  }
+  },
+  "notifications": {
+    "title": "Important Notifications",
+    "subtitle": "Stay informed and ride safe with our helpful notifications.",
+    "items": [
+      {
+        "title": "Delivery Updates",
+        "description": "You'll receive a notification as soon as your scooter is delivered and ready for use. No waiting around!"
+      },
+      {
+        "title": "Smart Parking",
+        "description": "Always park your scooter in safe areas that comply with local regulations. Help us keep our cities tidy and accessible."
+      },
+      {
+        "title": "Safety Gear Included",
+        "description": "Your safety is our priority. Each scooter comes equipped with a helmet and an integrated lock for your security and peace of mind."
+      }
+    ]
+  },
+  "battery": {
+    "alt": "Battery Management",
+    "title": "Battery Management",
+    "subtitle": "We take care of the charge, so you can focus on the ride.",
+    "card": {
+      "title": "Proactive Monitoring & Swaps",
+      "description": "Forget battery anxiety. We continuously monitor the battery level of your scooter remotely. When the battery level drops to 40%, you can schedule a battery swap through the app. Simply leave the scooter in an accessible area, and our team will handle the battery replacement for you.",
+      "swapTitle": "Our subscription tiers offer convenient battery swap options:",
+      "plans": {
+        "easy": {
+          "title": "Easy Move",
+          "description": "Includes one battery swap per week."
+        },
+        "super": {
+          "title": "Super Move",
+          "description": "Includes two battery swaps per week."
+        }
+      }
+    }
+  },
+  "readyToRide": {
+    "title": "Ready to Ride Smarter?",
+    "description": "Experience the future of urban mobility. Download the Move app and start your eco-friendly journey today!",
+    "button": "Get Started"
+  },
+  "ourGreenMission": {
+    "title": "Our Green Mission",
+    "description": "At Move, we are committed to revolutionizing urban transportation. As a green startup, our core mission is to provide accessible and environmentally friendly electric micro-mobility options.\n\nWe believe in a future where cities are less congested, air is cleaner, and getting around is both fun and sustainable.",
+    "imageAlt": "Electric scooters parked on a street",
+    "features": [
+      {
+        "title": "Sustainability First",
+        "description": "Our operations are designed with the planet in mind. From utilizing renewable energy sources for charging our fleet to implementing robust recycling programs for batteries and vehicle parts, sustainability is at the heart of everything we do."
+      },
+      {
+        "title": "Innovative Micro-Mobility",
+        "description": "We offer a range of state-of-the-art electric scooters and bikes, equipped with the latest technology for safety, efficiency, and user convenience. Our smart app makes finding, unlocking, and riding a Move vehicle seamless."
+      },
+      {
+        "title": "Community Focused",
+        "description": "Move is more than just a service; it's a community of forward-thinkers dedicated to creating greener, more livable cities. We partner with local authorities and communities to ensure our services contribute positively to urban life."
+      }
+    ]
+  },
+  "vision": {
+    "heading": "Our Vision for the Future",
+    "subtitle": "We envision a world where electric micro-mobility is the preferred choice for short urban journeys, contributing to significant reductions in carbon emissions and traffic congestion. Move aims to be at the forefront of this green transportation revolution.",
+    "zeroEmissions": {
+      "title": "Zero Emissions",
+      "description": "Our entire fleet is 100% electric, producing zero tailpipe emissions and helping improve air quality in our cities."
+    },
+    "circularEconomy": {
+      "title": "Circular Economy",
+      "description": "We are committed to principles of the circular economy, focusing on durability, repairability, and recyclability of our vehicles."
+    },
+    "greenerCities": {
+      "title": "Greener Cities",
+      "description": "By providing an alternative to cars, we help reduce traffic, noise pollution, and free up urban space for people and nature."
+    }
+  },
+  "cta": {
+    "heading": "Join The Movement",
+    "description": "Be part of the change. Choose Move for your daily commute and help us build a more sustainable future, one ride at a time.",
+    "button": "Download The App"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Any question or remark? Just write us a message",
+    "infoTitle": "Contact Us",
+    "infoDescription": "Fill up the form and our team will get back to you within 24 hours.",
+    "phone": "+123 456 7890",
+    "email": "contact@example.com",
+    "address": "123 Main St, City",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "message": "Message",
+      "submit": "Send Message"
+    },
+    "alert": "Message Sent!"
+  },
+  "quickLinks": {
+    "title": "Quick Links",
+    "about": "About Us",
+    "howItWorks": "How It Works",
+    "pricing": "Pricing",
+    "safety": "Safety"
+  },
+  "support": {
+    "title": "Support",
+    "helpCenter": "Help Center",
+    "contact": "Contact Us",
+    "faq": "FAQ"
+  },
+  "legal": {
+    "title": "Legal",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy"
+  },
+  "copyright": "© 2025 Move Inc. All rights reserved."
 }

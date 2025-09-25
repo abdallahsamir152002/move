@@ -6,7 +6,6 @@
     "contact": "Contattaci",
     "downloadApp": "Scarica l'app"
   },
-
   "aboutMove": {
     "title": "Chi è Move",
     "description": "Pionieri della mobilità urbana sostenibile con soluzioni intelligenti e rispettose dell'ambiente per la micro-mobilità elettrica."
@@ -28,5 +27,125 @@
         "description": "Goditi il tuo monopattino! Parcheggialo dove necessario utilizzando l'app. L'ultimo giorno del noleggio, lascialo in un punto accessibile per il ritiro e scatta una foto della posizione tramite l'app."
       }
     ]
-  }
-}
+  },
+  "notifications": {
+    "title": "Notifiche importanti",
+    "subtitle": "Rimani informato e guida in sicurezza con le nostre utili notifiche.",
+    "items": [
+      {
+        "title": "Aggiornamenti sulla consegna",
+        "description": "Riceverai una notifica non appena il tuo scooter sarà consegnato e pronto all'uso. Niente attese!"
+      },
+      {
+        "title": "Parcheggio intelligente",
+        "description": "Parcheggia sempre il tuo scooter in aree sicure che rispettano le normative locali. Aiutaci a mantenere le nostre città ordinate e accessibili."
+      },
+      {
+        "title": "Attrezzatura di sicurezza inclusa",
+        "description": "La tua sicurezza è la nostra priorità. Ogni scooter è dotato di casco e lucchetto integrato per la tua protezione e tranquillità."
+      }
+    ]
+  },
+  "battery": {
+    "alt": "Gestione della Batteria",
+    "title": "Gestione della Batteria",
+    "subtitle": "Ci occupiamo della ricarica, così puoi concentrarti solo sulla guida.",
+    "card": {
+      "title": "Monitoraggio Proattivo & Sostituzioni",
+      "description": "Dimentica l'ansia per la batteria. Monitoriamo continuamente il livello della batteria del tuo scooter da remoto. Quando il livello scende al 40%, puoi programmare una sostituzione tramite l'app. Basta lasciare lo scooter in un'area accessibile e il nostro team si occuperà della sostituzione della batteria per te.",
+      "swapTitle": "I nostri piani di abbonamento offrono comode opzioni di sostituzione della batteria:",
+      "plans": {
+        "easy": {
+          "title": "Easy Move",
+          "description": "Include una sostituzione della batteria a settimana."
+        },
+        "super": {
+          "title": "Super Move",
+          "description": "Include due sostituzioni della batteria a settimana."
+        }
+      }
+    }
+  },
+  "readyToRide": {
+    "title": "Pronto a Guidare in Modo più Intelligente?",
+    "description": "Scopri il futuro della mobilità urbana. Scarica l'app Move e inizia oggi stesso il tuo viaggio ecologico!",
+    "button": "Inizia Ora"
+  },
+  "ourGreenMission": {
+    "title": "La Nostra Missione Verde",
+    "description": "In Move, siamo impegnati a rivoluzionare il trasporto urbano. Come startup green, la nostra missione principale è offrire opzioni di micro-mobilità elettrica accessibili ed ecologiche.\n\nCrediamo in un futuro in cui le città siano meno congestionate, l'aria sia più pulita e spostarsi sia divertente e sostenibile.",
+    "imageAlt": "Monopattini elettrici parcheggiati in strada",
+    "features": [
+      {
+        "title": "Sostenibilità al Primo Posto",
+        "description": "Le nostre operazioni sono progettate pensando al pianeta. Dall'uso di fonti di energia rinnovabile per ricaricare la nostra flotta all'implementazione di solidi programmi di riciclaggio per batterie e parti di veicoli, la sostenibilità è al centro di tutto ciò che facciamo."
+      },
+      {
+        "title": "Micro-Mobilità Innovativa",
+        "description": "Offriamo una gamma di monopattini e biciclette elettriche all'avanguardia, dotati delle ultime tecnologie per sicurezza, efficienza e comodità dell'utente. La nostra app intelligente rende semplice trovare, sbloccare e guidare un veicolo Move."
+      },
+      {
+        "title": "Focus sulla Comunità",
+        "description": "Move è più di un servizio; è una comunità di innovatori dedicati a creare città più verdi e vivibili. Collaboriamo con autorità locali e comunità per garantire che i nostri servizi contribuiscano positivamente alla vita urbana."
+      }
+    ]
+  },
+  "vision": {
+    "heading": "La nostra visione per il futuro",
+    "subtitle": "Immaginiamo un mondo in cui la micro-mobilità elettrica sia la scelta preferita per i brevi spostamenti urbani, contribuendo a ridurre in modo significativo le emissioni di carbonio e la congestione del traffico. Move mira a essere in prima linea in questa rivoluzione verde dei trasporti.",
+    "zeroEmissions": {
+      "title": "Emissioni zero",
+      "description": "L'intera nostra flotta è 100% elettrica, non produce emissioni di scarico e contribuisce a migliorare la qualità dell'aria nelle nostre città."
+    },
+    "circularEconomy": {
+      "title": "Economia circolare",
+      "description": "Ci impegniamo a seguire i principi dell'economia circolare, concentrandoci sulla durabilità, riparabilità e riciclabilità dei nostri veicoli."
+    },
+    "greenerCities": {
+      "title": "Città più verdi",
+      "description": "Offrendo un'alternativa alle auto, aiutiamo a ridurre il traffico, l'inquinamento acustico e a liberare spazi urbani per le persone e la natura."
+    }
+  },
+  "cta": {
+    "heading": "Unisciti al movimento",
+    "description": "Fai parte del cambiamento. Scegli Move per i tuoi spostamenti quotidiani e aiutaci a costruire un futuro più sostenibile, una corsa alla volta.",
+    "button": "Scarica l'app"
+  },
+  "contact": {
+    "title": "Contattaci",
+    "subtitle": "Hai domande o commenti? Scrivici un messaggio",
+    "infoTitle": "Contattaci",
+    "infoDescription": "Compila il modulo e il nostro team ti risponderà entro 24 ore.",
+    "phone": "+123 456 7890",
+    "email": "contact@example.com",
+    "address": "123 Via Principale, Città",
+    "form": {
+      "firstName": "Nome",
+      "lastName": "Cognome",
+      "email": "Indirizzo Email",
+      "phone": "Numero di Telefono",
+      "message": "Messaggio",
+      "submit": "Invia Messaggio"
+    },
+    "alert": "Messaggio inviato!"
+  },
+  "quickLinks": {
+    "title": "Link Rapidi",
+    "about": "Chi Siamo",
+    "howItWorks": "Come Funziona",
+    "pricing": "Prezzi",
+    "safety": "Sicurezza"
+  },
+  "support": {
+    "title": "Supporto",
+    "helpCenter": "Centro Assistenza",
+    "contact": "Contattaci",
+    "faq": "Domande Frequenti"
+  },
+  "legal": {
+    "title": "Legale",
+    "terms": "Termini di Servizio",
+    "privacy": "Informativa sulla Privacy"
+  },
+  "copyright": "© 2025 Move Inc. Tutti i diritti riservati."
+} 

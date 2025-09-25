@@ -1,57 +1,59 @@
-import {Zap , Recycle , TreePine} from 'lucide-react';
-
-
-
-    const VisionItems = [
-         {
-            icon: <Zap className="w-8 h-8 text-lime-500" />,
-            title: "Zero Emissions",
-            description: "Our entire fleet is 100% electric, producing zero tailpipe emissions and helping improve air quality in our cities."
-        },
-         {
-            icon: <Recycle className="w-8 h-8 text-lime-500" />,
-            title: "Circular Economy",
-            description: "We are committed to principles of the circular economy, focusing on durability, repairability, and recyclability of our vehicles."
-        },
-         {
-            icon: <TreePine className="w-8 h-8 text-lime-500" />,
-            title: "Greener Cities",
-            description: "By providing an alternative to cars, we help reduce traffic, noise pollution, and free up urban space for people and nature."
-        }           
-    ];
-    
-
+import { Zap, Recycle, TreePine } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 export default function VisionSection() {
-    return(
+    const { t } = useTranslation();
 
+    const VisionItems = [
+        {
+            icon: <Zap className="w-8 h-8 text-lime-500" />,
+            title: t("vision.zeroEmissions.title"),
+            description: t("vision.zeroEmissions.description"),
+        },
+        {
+            icon: <Recycle className="w-8 h-8 text-lime-500" />,
+            title: t("vision.circularEconomy.title"),
+            description: t("vision.circularEconomy.description"),
+        },
+        {
+            icon: <TreePine className="w-8 h-8 text-lime-500" />,
+            title: t("vision.greenerCities.title"),
+            description: t("vision.greenerCities.description"),
+        },
+    ];
+
+    return (
         <section className="bg-gray-50 py-16">
             <div className="container mx-auto px-4 text-center">
                 <h2 className="text-3xl font-bold text-lime-500 mb-4">
-                    Our Vision for the Future
+                    {t("vision.heading")}
                 </h2>
-                <p className="text-black  text-bold max-w-2xl mx-auto mb-12">
-                    We envision a world where electric micro-mobility is the preferred choice for short urban journeys, contributing to significant reductions in carbon emissions and traffic congestion. Move aims to be at the forefront of this green transportation revolution.
+                <p className="text-black font-semibold max-w-2xl mx-auto mb-12">
+                    {t("vision.subtitle")}
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {VisionItems.map((item, index) => (
-                        <div
+                        <motion.div
                             key={index}
-                            className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center"
+                            className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center cursor-pointer"
+                            whileHover={{
+                                scale: 1.05,
+                                y: -5,
+                                boxShadow: "0px 10px 20px rgba(0,0,0,0.15)"
+                            }}
+                            transition={{ type: "spring", stiffness: 300, damping: 20 }}
                         >
                             {item.icon}
                             <h3 className="text-lg font-semibold text-gray-900 mt-4 mb-2">
                                 {item.title}
                             </h3>
-                            <p className="text-gray-600 text-sm">
-                                {item.description}
-                            </p>
-                        </div>
+                            <p className="text-gray-600 text-sm">{item.description}</p>
+                        </motion.div>
                     ))}
                 </div>
             </div>
         </section>
     );
-}   
- 
+}
