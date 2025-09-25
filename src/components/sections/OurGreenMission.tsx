@@ -62,7 +62,7 @@ export default function OurGreenMission() {
           {/* Left Side - Image */}
           <div>
             <img
-              src="/5W0A9842.jpg"
+              src="/assets/5W0A9842.jpg"
               alt={t("ourGreenMission.imageAlt")}
               loading="lazy"
               className="w-full h-auto rounded-xl shadow-xl object-cover"

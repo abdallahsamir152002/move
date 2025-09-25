@@ -10,7 +10,7 @@ export default function BatteryManagement() {
         {/* Image Left */}
         <div className="flex justify-center">
           <img
-            src="/5W0A9798.jpg"
+            src="/assets/5W0A9798.jpg"
             alt={t("battery.alt")}
             className="rounded-3xl shadow-lg w-full max-w-md"
           />

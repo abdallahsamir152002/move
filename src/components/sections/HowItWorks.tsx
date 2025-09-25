@@ -17,7 +17,11 @@ export default function HowItsWorks() {
   return (
     <div className="py-16 px-4 text-center bg-white" id="How-it-Works">
       <div className="flex justify-center mb-4">
-        <img src="/Scooter Move-05.jpg" alt="Scooter" className="w-20 h-20" />
+        <img
+          src="/assets/Scooter Move-05.jpg"
+          alt="Scooter"
+          className="w-20 h-20"
+        />
       </div>
 
       <h2 className="text-4xl text-lime-500 font-bold mb-2">

@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <div className="w-full h-screen relative overflow-x-hidden">
       <img
-        src="/background.jpg"
+        src="/assets/background.jpg"
         alt="Hero"
         className="w-full h-full object-cover z-[-1] absolute blur-[2px]"
       />

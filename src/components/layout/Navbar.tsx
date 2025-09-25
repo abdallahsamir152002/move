@@ -72,7 +72,7 @@ export default function Navbar() {
         {/* Logo */}
         <div className="flex items-center gap-6">
           <img
-            src={!isScrolled ? "/logo-white.png" : "/logo.png"}
+            src={!isScrolled ? "/assets/logo-white.png" : "/assets/logo.png"}
             alt="Logo"
             className="h-[88px] w-[120px] object-contain transition-all duration-300"
           />

@@ -40,7 +40,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-10 text-center md:text-left">
           {/* Logo */}
           <div className="flex justify-center md:justify-start">
-            <img src="/logo.png" alt="Move Logo" className="h-12" />
+            <img src="/assets/logo.png" alt="Move Logo" className="h-12" />
           </div>
 
           {/* Right Side (3 Columns) */}

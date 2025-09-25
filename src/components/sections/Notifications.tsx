@@ -18,7 +18,7 @@ export default function Notifications() {
   return (
     <div className="py-16 px-4 bg-white text-center" id="notifications">
       <div className="flex justify-center mb-4">
-        <img src="/bells.jpeg" alt="Bell" className="w-20 h-20" />
+        <img src="/assets/bells.jpeg" alt="Bell" className="w-20 h-20" />
       </div>
 
       <h2 className="text-3xl text-lime-500 font-bold mb-2">
