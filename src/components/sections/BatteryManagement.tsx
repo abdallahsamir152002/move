@@ -7,11 +7,10 @@ export default function BatteryManagement() {
   return (
     <div className="bg-white py-16 px-6">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-
         {/* Image Left */}
         <div className="flex justify-center">
           <img
-            src="/5W0A9798.JPG"
+            src="/5W0A9798.jpg"
             alt={t("battery.alt")}
             className="rounded-3xl shadow-lg w-full max-w-md"
           />
@@ -27,9 +26,7 @@ export default function BatteryManagement() {
             </h2>
           </div>
 
-          <p className="text-gray-700 font-medium">
-            {t("battery.subtitle")}
-          </p>
+          <p className="text-gray-700 font-medium">{t("battery.subtitle")}</p>
 
           {/* Card with Details */}
           <div className="bg-gray-50 rounded-2xl shadow p-6 space-y-4">
@@ -40,9 +37,7 @@ export default function BatteryManagement() {
               </h3>
             </div>
 
-            <p className="text-gray-700">
-              {t("battery.card.description")}
-            </p>
+            <p className="text-gray-700">{t("battery.card.description")}</p>
 
             <p className="font-medium text-center">
               {t("battery.card.swapTitle")}

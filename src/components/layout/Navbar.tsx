@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Download, ChevronDown, Globe } from "lucide-react";
 import { motion } from "framer-motion";
+import { cn } from "../../utils";
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
@@ -11,10 +12,11 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
-  const languageOptions: Record<"en" | "it", { label: string; flag: string }> = {
-    en: { label: "English", flag: "/flags/uk.png" },
-    it: { label: "Italiano", flag: "/flags/italy.png" },
-  };
+  const languageOptions: Record<"en" | "it", { label: string; flag: string }> =
+    {
+      en: { label: "English", flag: "/flags/uk.png" },
+      it: { label: "Italiano", flag: "/flags/italy.png" },
+    };
 
   useEffect(() => {
     document.documentElement.style.scrollBehavior = "smooth";
@@ -24,7 +26,10 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
 
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         setLangOpen(false);
       }
     };
@@ -37,39 +42,65 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="fixed top-0 w-full overflow-x-hidden z-50">
+    <div className="fixed top-0 w-full overflow-x-hidden z-50 flex items-center justify-center">
       {/* Navbar */}
       <motion.header
-        className={`fixed top-2 left-1/2 -translate-x-1/2 w-full max-w-6xl 
-                      px-4 py-2 flex justify-between items-center rounded-2xl
-                      backdrop-blur-md transition-all duration-300 z-50
-                      border ${isScrolled ? "bg-black/40 border-white/10 shadow-lg" : "bg-transparent border-transparent shadow-none"}`}
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        className={cn(
+          "fixed px-6 py-3 flex justify-between items-center rounded-2xl  z-50",
+          isScrolled && "border-white/10 shadow-lg backdrop-blur-md"
+        )}
+        initial={{
+          opacity: 0,
+          backgroundColor: "transparent",
+          width: "100%",
+          top: "0rem",
+        }}
+        animate={{
+          opacity: 1,
+          width: isScrolled ? "70%" : "100%",
+          top: isScrolled ? "0.5rem" : "0rem",
+          backgroundColor: isScrolled ? "rgba(0,0,0,0.4)" : "transparent",
+        }}
+        transition={{
+          duration: 0.3,
+          ease: "easeInOut", // removes bounce
+        }}
+        whileHover={
+          isScrolled ? { scale: 1.02, backgroundColor: "rgba(0,0,0,0.55)" } : {}
+        }
       >
         {/* Logo */}
         <div className="flex items-center gap-6">
           <img
-            src="/logo.png"
+            src={!isScrolled ? "/logo-white.png" : "/logo.png"}
             alt="Logo"
             className="h-[88px] w-[120px] object-contain transition-all duration-300"
           />
         </div>
 
         {/* Links */}
-        <nav className="hidden md:flex space-x-8 font-medium text-white">
+        <nav className="hidden md:flex space-x-4">
           {["about", "howItWorks", "locations", "contact"].map((link) => (
-            <motion.a
+            <a
               key={link}
               href={`#${link}`}
-              className="relative px-2 py-1"
-              whileHover={{ y: -2, scale: 1.05, color: "#84cc16" }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              className={cn("relative px-2 py-1 ")}
             >
-              {t(`navbar.${link}`)}
-              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-lime-500 transition-all group-hover:w-full"></span>
-            </motion.a>
+              <span
+                className={cn(
+                  "block font-medium text-white relative hover:text-lime-500 hover:scale-110 duration-300",
+                  isScrolled && "text-white"
+                )}
+              >
+                {t(`navbar.${link}`)}
+              </span>
+              {/* <span
+                className={
+                  "absolute left-0 -bottom-1 w-0 h-[2px] bg-lime-500 transition-all group-hover:w-full" +
+                  (isScrolled ? " text-white" : " text-black")
+                }
+              ></span> */}
+            </a>
           ))}
         </nav>
 
@@ -96,8 +127,11 @@ export default function Navbar() {
                 return (
                   <button
                     key={typedLang}
-                    className={`flex items-center justify-between px-4 py-2 w-full hover:bg-gray-100 transition ${currentLanguage === typedLang ? "font-semibold text-lime-600" : ""
-                      }`}
+                    className={`flex items-center justify-between px-4 py-2 w-full hover:bg-gray-100 transition ${
+                      currentLanguage === typedLang
+                        ? "font-semibold text-lime-600"
+                        : ""
+                    }`}
                     onClick={() => {
                       i18n.changeLanguage(typedLang);
                       setLangOpen(false);
