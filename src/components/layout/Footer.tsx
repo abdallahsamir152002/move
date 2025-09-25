@@ -1,12 +1,13 @@
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 
 export default function Footer() {
   const { t } = useTranslation();
 
   // Parent container animation (Stagger)
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -17,9 +18,13 @@ export default function Footer() {
   };
 
   // Children animation (columns)
-  const columnVariants = {
+  const columnVariants: Variants = {
     hidden: { opacity: 0, x: 30 },
-    show: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.6, ease: "easeOut" as const },
+    },
   };
 
   return (
@@ -49,29 +54,69 @@ export default function Footer() {
                 {t("quickLinks.title")}
               </h3>
               <ul className="space-y-1">
-                <li><a href="#about" className="hover:underline">{t("quickLinks.about")}</a></li>
-                <li><a href="#howItWorks" className="hover:underline">{t("quickLinks.howItWorks")}</a></li>
-                <li><a href="#pricing" className="hover:underline">{t("quickLinks.pricing")}</a></li>
-                <li><a href="#safety" className="hover:underline">{t("quickLinks.safety")}</a></li>
+                <li>
+                  <a href="#about" className="hover:underline">
+                    {t("quickLinks.about")}
+                  </a>
+                </li>
+                <li>
+                  <a href="#howItWorks" className="hover:underline">
+                    {t("quickLinks.howItWorks")}
+                  </a>
+                </li>
+                <li>
+                  <a href="#pricing" className="hover:underline">
+                    {t("quickLinks.pricing")}
+                  </a>
+                </li>
+                <li>
+                  <a href="#safety" className="hover:underline">
+                    {t("quickLinks.safety")}
+                  </a>
+                </li>
               </ul>
             </motion.div>
 
             {/* Support */}
             <motion.div variants={columnVariants}>
-              <h3 className="text-lime-600 font-bold mb-3">{t("support.title")}</h3>
+              <h3 className="text-lime-600 font-bold mb-3">
+                {t("support.title")}
+              </h3>
               <ul className="space-y-1">
-                <li><a href="#help" className="hover:underline">{t("support.helpCenter")}</a></li>
-                <li><a href="#contact" className="hover:underline">{t("support.contact")}</a></li>
-                <li><a href="#faq" className="hover:underline">{t("support.faq")}</a></li>
+                <li>
+                  <a href="#help" className="hover:underline">
+                    {t("support.helpCenter")}
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" className="hover:underline">
+                    {t("support.contact")}
+                  </a>
+                </li>
+                <li>
+                  <a href="#faq" className="hover:underline">
+                    {t("support.faq")}
+                  </a>
+                </li>
               </ul>
             </motion.div>
 
             {/* Legal */}
             <motion.div variants={columnVariants}>
-              <h3 className="text-lime-600 font-bold mb-3">{t("legal.title")}</h3>
+              <h3 className="text-lime-600 font-bold mb-3">
+                {t("legal.title")}
+              </h3>
               <ul className="space-y-1">
-                <li><a href="#terms" className="hover:underline">{t("legal.terms")}</a></li>
-                <li><a href="#privacy" className="hover:underline">{t("legal.privacy")}</a></li>
+                <li>
+                  <a href="#terms" className="hover:underline">
+                    {t("legal.terms")}
+                  </a>
+                </li>
+                <li>
+                  <a href="#privacy" className="hover:underline">
+                    {t("legal.privacy")}
+                  </a>
+                </li>
               </ul>
             </motion.div>
           </motion.div>

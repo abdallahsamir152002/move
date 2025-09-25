@@ -1,11 +1,17 @@
-import React from "react";
 import { CalendarDays, Truck, Map } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
+type Step = {
+  title: string;
+  description: string;
+};
+
 export default function HowItsWorks() {
   const { t } = useTranslation();
-  const steps = t("howItWorks.steps", { returnObjects: true });
+  const steps = t("howItWorks.steps", {
+    returnObjects: true,
+  }) as unknown as Step[];
   const icons = [CalendarDays, Truck, Map];
 
   return (

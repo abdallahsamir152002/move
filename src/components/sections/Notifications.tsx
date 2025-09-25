@@ -1,11 +1,17 @@
-import React from "react";
 import { BellRing, ParkingCircle, ShieldCheck } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
+interface Notification {
+  title: string;
+  description: string;
+}
+
 export default function Notifications() {
   const { t } = useTranslation();
-  const notifications = t("notifications.items", { returnObjects: true });
+  const notifications = t("notifications.items", {
+    returnObjects: true,
+  }) as unknown as Notification[];
 
   const icons = [BellRing, ParkingCircle, ShieldCheck];
 
@@ -31,7 +37,7 @@ export default function Notifications() {
               whileHover={{
                 scale: 1.05,
                 y: -5,
-                boxShadow: "0px 10px 20px rgba(0,0,0,0.15)"
+                boxShadow: "0px 10px 20px rgba(0,0,0,0.15)",
               }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
