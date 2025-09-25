@@ -61,7 +61,7 @@ export default function HeroSection() {
           </div>
         </motion.div>
         <motion.img
-          src="/scooter.png "
+          src="/assets/scooter.png "
           className="w-2xl object-contain absolute top-1/2 -right-24 -translate-y-1/3 z-10"
           initial={{ opacity: 0, transform: "translateX(200px)" }}
           animate={{ opacity: 1, transform: "translateX(0px)" }}
