@@ -90,7 +90,10 @@ export default function Navbar() {
       >
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <span onClick={() => setIsNavOpen(true)} className="cursor-pointer">
+          <span
+            onClick={() => setIsNavOpen(true)}
+            className="cursor-pointer md:hidden"
+          >
             <Menu color="white" size={24} />
           </span>
           <img
