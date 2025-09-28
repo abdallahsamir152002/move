@@ -1,13 +1,30 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { Download, ChevronDown, Globe } from "lucide-react";
+import { Download, ChevronDown, Globe, Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "../../utils";
-
+const navLinks = [
+  {
+    id: "about",
+    link: "#about",
+  },
+  {
+    id: "howItWorks",
+    link: "#How-it-Works",
+  },
+  {
+    id: "locations",
+    link: "#locations",
+  },
+  {
+    id: "contact",
+    link: "#Contact-Us",
+  },
+];
 export default function Navbar() {
   const { t, i18n } = useTranslation();
   const currentLanguage = i18n.language;
-
+  const [isNavOpen, setIsNavOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
@@ -46,7 +63,7 @@ export default function Navbar() {
       {/* Navbar */}
       <motion.header
         className={cn(
-          "fixed px-6 py-3 flex justify-between items-center rounded-2xl  z-50",
+          "fixed px-6 py-3 flex justify-between items-center z-50 [--nav-width:100%] md:[--nav-width:70%] [--top-distance:0rem] md:[--top-distance:0.5rem] [--border-radius:0rem] md:[--border-radius:1rem]",
           isScrolled && "border-white/10 shadow-lg backdrop-blur-md"
         )}
         initial={{
@@ -54,12 +71,14 @@ export default function Navbar() {
           backgroundColor: "transparent",
           width: "100%",
           top: "0rem",
+          borderRadius: "var(--border-radius)",
         }}
         animate={{
           opacity: 1,
-          width: isScrolled ? "70%" : "100%",
-          top: isScrolled ? "0.5rem" : "0rem",
+          width: isScrolled ? "var(--nav-width)" : "100%",
+          top: isScrolled ? "var(--top-distance)" : "0rem",
           backgroundColor: isScrolled ? "rgba(0,0,0,0.4)" : "transparent",
+          borderRadius: isScrolled ? "var(--border-radius)" : "0rem",
         }}
         transition={{
           duration: 0.3,
@@ -70,7 +89,10 @@ export default function Navbar() {
         }
       >
         {/* Logo */}
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-2">
+          <span onClick={() => setIsNavOpen(true)} className="cursor-pointer">
+            <Menu color="white" size={24} />
+          </span>
           <img
             src={!isScrolled ? "/assets/logo-white.png" : "/assets/logo.png"}
             alt="Logo"
@@ -80,10 +102,10 @@ export default function Navbar() {
 
         {/* Links */}
         <nav className="hidden md:flex space-x-4">
-          {["about", "howItWorks", "locations", "contact"].map((link) => (
+          {navLinks.map((link) => (
             <a
-              key={link}
-              href={`#${link}`}
+              key={link?.id}
+              href={link?.link}
               className={cn("relative px-2 py-1 ")}
             >
               <span
@@ -92,7 +114,7 @@ export default function Navbar() {
                   isScrolled && "text-white"
                 )}
               >
-                {t(`navbar.${link}`)}
+                {t(`navbar.${link?.id}`)}
               </span>
               {/* <span
                 className={
@@ -163,7 +185,7 @@ export default function Navbar() {
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
             <Download size={20} />
-            {t("navbar.downloadApp")}
+            <span className="hidden md:block">{t("navbar.downloadApp")}</span>
           </motion.button>
         </div>
       </motion.header>
@@ -180,6 +202,46 @@ export default function Navbar() {
       >
         <ChevronDown size={32} />
       </motion.div>
+      <div
+        className={cn(
+          "z-50 w-full h-screen fixed top-0 left-0 backdrop-blur-md bg-black/50 overflow-x-hidden transition-all duration-300",
+          isNavOpen ? "w-full" : "w-0"
+        )}
+      >
+        <div className="p-8">
+          <div className="mb-8">
+            <span
+              onClick={() => setIsNavOpen(false)}
+              className="cursor-pointer "
+            >
+              <X size={32} color="white" />
+            </span>
+          </div>
+          {navLinks.map((link) => (
+            <a
+              key={link?.id}
+              href={link?.link}
+              className={cn("relative px-2 py-1 ")}
+              onClick={() => setIsNavOpen(false)}
+            >
+              <span
+                className={cn(
+                  "block font-medium text-white relative hover:text-lime-500 hover:scale-110 duration-300 text-2xl mb-8",
+                  isScrolled && "text-white"
+                )}
+              >
+                {t(`navbar.${link?.id}`)}
+              </span>
+              {/* <span
+                className={
+                  "absolute left-0 -bottom-1 w-0 h-[2px] bg-lime-500 transition-all group-hover:w-full" +
+                  (isScrolled ? " text-white" : " text-black")
+                }
+              ></span> */}
+            </a>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
